@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skyline Consulting - Professional Business Solutions</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      color: white;
+      padding: 120px 20px 80px;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 64, 128, 0.7);
+      z-index: 0;
+    }
+    header > * {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 56px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+    header p {
+      font-size: 22px;
+      color: #cce0ff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    nav {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 14px 0;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 22px;
+      transition: color 0.3s ease;
+      font-size: 16px;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    .hero {
+      padding: 80px 20px 60px;
+      text-align: center;
+      background-color: #eaf0f6;
+      max-width: 900px;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    }
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #004080;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 14px 36px;
+      background-color: #0073e6;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: 0 8px 15px rgba(0,115,230,0.4);
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #005bb5;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px rgba(0,91,181,0.6);
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 35px;
+      padding: 60px 20px;
+      background-color: white;
+      max-width: 1080px;
+      margin: 60px auto;
+      border-radius: 12px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.05);
+    }
+    .service {
+      background-color: #f9fbff;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+    .service:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    .service svg {
+      width: 64px;
+      height: 64px;
+      fill: #0073e6;
+      margin-bottom: 18px;
+    }
+    .service h3 {
+      color: #004080;
+      font-size: 26px;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    .service p {
+      font-size: 17px;
+      color: #555;
+      line-height: 1.5;
+    }
+    .about {
+      padding: 60px 20px;
+      background-color: #f0f4f9;
+      text-align: center;
+      max-width: 900px;
+      margin: 80px auto 60px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+    .about h2 {
+      font-size: 38px;
+      margin-bottom: 22px;
+      font-weight: 700;
+      color: #003366;
+    }
+    .about p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+    }
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 36px;
+      }
+      .hero h2 {
+        font-size: 28px;
+      }
+      nav a {
+        margin: 10px 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Skyline Consulting</h1>
+  <p>Professional Business Solutions for Modern Enterprises</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#services">Services</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" role="banner" aria-label="Business consulting introduction">
+  <h2>Empowering Your Business to Succeed</h2>
+  <p>We provide expert consulting, digital transformation, and strategic solutions tailored to your unique business goals.</p>
+  <a href="#contact" class="cta-button" role="button">Get Started Today</a>
+</section>
+
+<section class="services" id="services" aria-label="Our consulting services">
+  <article class="service" role="region" aria-labelledby="service1-title">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 3L3 16v18c0 11 9 20 20 20h18c11 0 20-9 20-20V16L32 3zM31 50H22a3 3 0 01-3-3v-7h12v10zm13-7a3 3 0 01-3 3H33V34h13v9zM31 31H17v-8h28v8H31zm-6-4v4h-6v-4h6zm23 0v4h-6v-4h6z"/></svg>
+    <h3 id="service1-title">Business Strategy</h3>
+    <p>Craft data-driven business strategies that fuel sustainable growth and competitive advantage.</p>
+  </article>
+  <article class="service" role="region" aria-labelledby="service2-title">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M44 2H20a6 6 0 00-6 6v48a6 6 0 006 6h24a6 6 0 006-6V8a6 6 0 00-6-6zm-4 52H24v-4h16v4zm0-10H24v-4h16v4zm0-10H24v-4h16v4z"/></svg>
+    <h3 id="service2-title">Digital Transformation</h3>
+    <p>Leverage cutting-edge technologies to streamline operations and enhance customer experiences.</p>
+  </article>
+  <article class="service" role="region" aria-labelledby="service3-title">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M44 14H20a4 4 0 00-4 4v28a4 4 0 004 4h24a4 4 0 004-4V18a4 4 0 00-4-4zm-8 20a6 6 0 110-12 6 6 0 010 12z"/></svg>
+    <h3 id="service3-title">Market Analysis</h3>
+    <p>Provide detailed insights and forecasts to help you make informed market decisions.</p>
+  </article>
+</section>
+
+<section class="about" id="about" aria-label="About Skyline Consulting">
+  <h2>About Us</h2>
+  <p>At Skyline Consulting, our mission is to empower businesses to unlock their full potential by offering expert consulting services tailored to your needs. Our team combines industry expertise with innovative solutions to drive measurable results.</p>
+</section>
+
+<footer role="contentinfo">
+  <p>Contact us: <a href="mailto:info@skylineconsulting.com">info@skylineconsulting.com</a> | Phone: +1 (555) 123-4567</p>
+  <p>© 2025 Skyline Consulting. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
